@@ -10,6 +10,7 @@ class Client extends Discord.Client {
         })
         this.commands = new Discord.Collection()
         this.events = new Discord.Collection()
+        this.colors = require('../colors.json')
     }
     init() {
         this.login(process.env.TOKEN)

@@ -15,10 +15,11 @@ module.exports = async (client) => {
     const array = []
     commandFiles.map((value) => {
         const file = require(value)
-        const fileName = value.replace('.js', '')
+        const splitted = value.split('/')
+        const directory = splitted[splitted.length - 2]
         if (!file?.name) return
-        client.commands.set(file.name, file)
-        console.log(`Loaded command: ${fileName}`)
+        const properties = {directory, ...file}
+        client.commands.set(file.name, properties)
         if (['MESSAGE', 'USER'].includes(file.type)) delete file.description
         array.push(file)
     })
