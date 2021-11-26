@@ -25,8 +25,7 @@ module.exports = {
                 .map((cmd) => {
                     return {
                         name: cmd.name || 'No command name',
-                        description: cmd.description || 'No command description',
-                        usage: cmd.usage || 'No command usage'
+                        description: cmd.description || 'No command description'
                     }
                 })
             return {
@@ -68,7 +67,7 @@ module.exports = {
                     category.commands.map((cmd) => {
                         return {
                             name: `\`${cmd.name}\``,
-                            value: cmd.description,
+                            value: `${cmd.description}`,
                             inline: true
                         }
                     })
