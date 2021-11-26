@@ -1,0 +1,20 @@
+{
+    "name": "lucifer-morningstar",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "discord.js": "^13.3.1",
+        "dotenv": "^10.0.0",
+        "glob": "^7.2.0",
+        "mongoose": "^6.0.13"
+    },
+    "description": ""
+}
