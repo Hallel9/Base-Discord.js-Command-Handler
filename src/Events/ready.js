@@ -17,7 +17,10 @@ process.on('uncaughtException', (err) => {
                     name: `${err.name}`
                 },
                 description: `${err.stack}`,
-                color: 'NOT_QUITE_BLACK'
+                color: 'NOT_QUITE_BLACK',
+                footer: {
+                  text: "Uncaught Exception"
+                }
             }
         ]
     })
@@ -33,7 +36,10 @@ process.on('unhandledRejection', (err) => {
                     name: `${err.name}`
                 },
                 description: `${err.stack}`,
-                color: 'NOT_QUITE_BLACK'
+                color: 'NOT_QUITE_BLACK',
+                footer: {
+                  text: "Unhandled Rejection"
+                }
             }
         ]
     })
