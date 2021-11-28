@@ -14,10 +14,13 @@ process.on('uncaughtException', (err) => {
         embeds: [
             {
                 author: {
-                    name: `[UNCAUGHT EXCEPTION]`
+                    name: `${err.name}`
                 },
-                description: `${err}`,
-                color: 'NOT_QUITE_BLACK'
+                description: `${err.stack}`,
+                color: 'NOT_QUITE_BLACK',
+                footer: {
+                  text: "Uncaught Exception"
+                }
             }
         ]
     })
@@ -30,10 +33,13 @@ process.on('unhandledRejection', (err) => {
         embeds: [
             {
                 author: {
-                    name: `[UNHANDLED REJECTION]`
+                    name: `${err.name}`
                 },
-                description: `${err}`,
-                color: 'NOT_QUITE_BLACK'
+                description: `${err.stack}`,
+                color: 'NOT_QUITE_BLACK',
+                footer: {
+                  text: "Unhandled Rejection"
+                }
             }
         ]
     })
