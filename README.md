@@ -15,3 +15,5 @@ Watch a tutorial [here](https://www.youtube.com/watch?v=Bg1d2ho2pgY) if needed.
 
 # Help or Questions
 If you need any help or have any questions, you may find me on [Discord](https://discord.gg/Fn2BHYyHJP)
+
+# Event and Command Handlers were made with recon's [handler](https://youtu.be/8yLIPTxrj08)
