@@ -9,7 +9,7 @@ client.on('error', (err) => {
 })
 
 process.on('uncaughtException', (err) => {
-    const wc = new Discord.WebhookClient({url: 'https://discord.com/api/webhooks/911373651071336548/dOHG1iFx8OdBZ0hPWeTnYNOXytExmIDNCC_9JbguDtqF1Z19anAGqhudWVBRiI9NNsVo'})
+    const wc = new Discord.WebhookClient({url:'webhookurl'})
     wc.send({
         embeds: [
             {
@@ -25,7 +25,7 @@ process.on('uncaughtException', (err) => {
 })
 
 process.on('unhandledRejection', (err) => {
-    const wc = new Discord.WebhookClient({url: 'https://discord.com/api/webhooks/911373651071336548/dOHG1iFx8OdBZ0hPWeTnYNOXytExmIDNCC_9JbguDtqF1Z19anAGqhudWVBRiI9NNsVo'})
+    const wc = new Discord.WebhookClient({url: 'webhookurl'})
     wc.send({
         embeds: [
             {
