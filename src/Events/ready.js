@@ -9,17 +9,17 @@ client.on('error', (err) => {
 })
 
 process.on('uncaughtException', (err) => {
-    const wc = new Discord.WebhookClient({url:'webhookurl'})
+    const wc = new Discord.WebhookClient({url: 'webhookurl'})
     wc.send({
         embeds: [
             {
                 author: {
-                    name: `${err.name}`
+                    name: `${err.name} - ${client.user.tag}`
                 },
                 description: `${err.stack}`,
                 color: 'NOT_QUITE_BLACK',
                 footer: {
-                  text: "Uncaught Exception"
+                    text: 'Uncaught Exception'
                 }
             }
         ]
@@ -33,12 +33,12 @@ process.on('unhandledRejection', (err) => {
         embeds: [
             {
                 author: {
-                    name: `${err.name}`
+                    name: `${err.name} - ${client.user.tag}`
                 },
                 description: `${err.stack}`,
                 color: 'NOT_QUITE_BLACK',
                 footer: {
-                  text: "Unhandled Rejection"
+                    text: 'Unhandled Rejection'
                 }
             }
         ]
