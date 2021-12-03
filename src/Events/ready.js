@@ -4,6 +4,7 @@ client.on('ready', () => {
     console.log(`${client.user.tag} is ready to go!`)
 })
 
+// If you don't want error handling, just delete the lines below.
 client.on('error', (err) => {
     console.log(`[CLIENT ERROR] - ${err}`)
 })
